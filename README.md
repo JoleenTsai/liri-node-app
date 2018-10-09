@@ -17,7 +17,7 @@ Description | Screenshot
  Result returned in terminal | ![Image of Spotify Result Console](./screenshots/SpotifyResultConsole.png)
  Check Log.txt to ensure result is logged | ![Image of Spotify Result](./screenshots/SpotifyResult.png)
 
- ## BANDSINTOWN
+ ## OMDB
 Description | Screenshot
  ----------- | ----------
  Enter command *node liri.js init* into terminal | ![Image of Initialization](./screenshots/Init.png)

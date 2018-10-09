@@ -88,7 +88,6 @@ const movieThis = movie => {
 const command = choice => {
     switch (choice) {
         case "concert-this":
-        // concertThis(process.argv[3])
             inq.prompt([
                 {
                     type: 'input',
@@ -100,7 +99,6 @@ const command = choice => {
             break
 
         case 'spotify-this-song':
-            // spotifyThis(process.argv[3])
             inq.prompt([
                 {
                     type: 'input',
@@ -112,7 +110,6 @@ const command = choice => {
             break
 
         case 'movie-this':
-            // movieThis(process.argv[3])
             inq.prompt([
                 {
                     type: 'input',
