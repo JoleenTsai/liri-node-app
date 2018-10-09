@@ -1,7 +1,7 @@
-require('dotenv').config()
 const request = require('request')
+require('dotenv').config()
 
-const keys = require("./keys")
+const keys = require('./keys.js')
 const fs = require('fs')
 const inq = require('inquirer')
 const moment = require('moment')
@@ -13,23 +13,30 @@ const concertThis = artist => {
         const info = JSON.parse(d)
         const data = `
                 
-        Movie-This
+        CONCERT-THIS
         -------------------
-        Venue Location: ${info[0].venue.name}
-                        ${info[0].venue.city}, ${info[0].venue.region}
-        Date of Event: ${moment(info[0].datetime).format(`MM/DD/YYYY`)}
+        ${info[0].lineup}
+
+        Venue Location:      ${info[0].venue.name}
+                             ${info[0].venue.city}, ${info[0].venue.region}, ${info[0].venue.country}
+        Date of Event:       ${moment(info[0].datetime).format(`ddd MM/DD/YYYY`)}
+        Ticket Availability: ${info[0].offers[0].status}
+        Buy Ticket URL:
+          ${info[0].offers[0].url}
         --------------------
-        
         `
+
                 console.log(data)
-            fs.appendFile('log.txt', data, e => e ? console.log(e) : console.log('Success!'))
+            fs.appendFile('log.txt', data, e =>
+            { if (e) {console.log(e)}
                 })      
-            }
+            })
+        }
         
 // Spotify
 const spotifyThis = song => {
-    const spotifyApi = require('node-spotify-api')
-    let spotify = new Spotify({
+    const spotifyReq = require('node-spotify-api')
+    let spotify = new spotifyReq ({
         id: keys.spotify.id,
         secret: keys.spotify.secret
     })
@@ -37,17 +44,18 @@ const spotifyThis = song => {
         if (e) {console.log(e)}
         const data = `
 
-        Spotify-This
+        SPOTIFY-THIS
         --------------------
         Song Name: ${d.tracks.items[0].name}
         Artist Name: ${d.tracks.items[0].artists[0].name}
         Album Name: ${d.tracks.items[0].album.name}
         URL: ${d.tracks.items[0].preview_url}
         --------------------
-        
         `
         console.log(data)
-        fs.appendFile('log.txt', data, e => e ? console.log(e) : console.log('Success!'))
+        fs.appendFile('log.txt', data, e => {
+            if (e) { console.log(e) }
+                 })      
             })
         }
 
@@ -55,11 +63,11 @@ const spotifyThis = song => {
 const movieThis = movie => {
     request(`http://www.omdbapi.com/?t=${movie}&apikey=${keys.omdb.id}`, (e, r, d) => {
         if (e) {console.log(e)}
-        console.log(r)
         const movie = JSON.parse(d)
-        const data = `
+        const data =
+        `
 
-        Movie-This
+        MOVIE-THIS
         --------------------
         ${movie.Title}
         Year: ${movie.Year}
@@ -70,67 +78,69 @@ const movieThis = movie => {
         Plot: ${movie.Plot}
         Actors: ${movie.Actors}
         --------------------
-        
         `
         console.log(data)
         fs.appendFile('log.txt', data, e => {
-            if (e) { console.log(e) }
+            if (e) {console.log(e)}
         })
     })
 }
 const command = choice => {
     switch (choice) {
         case "concert-this":
-        concertThis(process.argv[3])
-            // inq.prompt([
-            //     {
-            //         type: 'input',
-            //         message: 'Which artist would you like to see?',
-            //         name: 'artistChoice'
-            //     }
-            // ])
-            //     .then(answers => concertThis(answers.artistChoice))
+        // concertThis(process.argv[3])
+            inq.prompt([
+                {
+                    type: 'input',
+                    message: 'Which artist would you like to see?',
+                    name: 'artistChoice'
+                }
+            ])
+                .then(answers => concertThis(answers.artistChoice))
             break
 
         case 'spotify-this-song':
-            spotifyThis(process.argv[3])
-            // inq.prompt([
-            //     {
-            //         type: 'input',
-            //         message: 'What song would you like to search?',
-            //         name: 'songChoice'
-            //     }
-            // ])
-            //     .then(answers => spotifyThis(answers.songChoice))
+            // spotifyThis(process.argv[3])
+            inq.prompt([
+                {
+                    type: 'input',
+                    message: 'What song would you like to search?',
+                    name: 'songChoice'
+                }
+            ])
+                .then(answers => spotifyThis(answers.songChoice))
             break
 
         case 'movie-this':
-            movieThis(process.argv[3])
-            // inq.prompt([
-            //     {
-            //         type: 'input',
-            //         message: 'What movie would you like to search?',
-            //         name: 'movieChoice'
-            //     }
-            // ])
-            //     .then(answers => movieThis(answers.movieChoice))
+            // movieThis(process.argv[3])
+            inq.prompt([
+                {
+                    type: 'input',
+                    message: 'What movie would you like to search?',
+                    name: 'movieChoice'
+                }
+            ])
+                .then(answers => movieThis(answers.movieChoice))
             break
 
     }
 
 }
 
-// const runApp = () => {
-//     if (process.argv[2] === 'init') {
-//         inq.prompt([
-//             {
-//                 type: 'list',
-//                 message: 'Welcome to Liri! Please select a search function:',
-//                 choices: ['Search for a concert','Search for a song', 'Search for a movie', ]
-//             }
-//         ])
-//             .then(answers => command(answers.userChoice))
-//     }
-// }
-
-// runApp()
+const begin = () => {
+    if (process.argv[2] === 'init') {
+        inq.prompt([
+            {
+                type: 'list',
+                name: 'userChoice',
+                message: 'Welcome to Liri! Please select a search function:',
+                choices: ['concert-this','spotify-this-song', 'movie-this']
+            }
+        ])
+            .then(answers => command(answers.userChoice))
+             .catch(e => {
+                if (e) { console.log(e) }
+        })
+    }
+}
+begin()

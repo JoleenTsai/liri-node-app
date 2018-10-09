@@ -1,0 +1,119 @@
+
+                
+        CONCERT-THIS
+        -------------------
+        Maroon 5,Julia Michaels
+
+        Venue Location:      XL Center
+                             Hartford, CT, United States
+        Date of Event:       Wed 10/10/2018
+        Ticket Availability: available
+        Buy Ticket URL:
+          https://www.bandsintown.com/t/1001879067?app_id=ba3e912d98b406ee806e6327ffe591bc&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket
+        --------------------
+        
+                
+        CONCERT-THIS
+        -------------------
+        Maroon 5,Julia Michaels
+
+        Venue Location:      XL Center
+                             Hartford, CT, United States
+        Date of Event:       Wed 10/10/2018
+        Ticket Availability: available
+        Buy Ticket URL:
+          https://www.bandsintown.com/t/1001879067?app_id=ba3e912d98b406ee806e6327ffe591bc&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket
+        --------------------
+        
+
+        SPOTIFY-THIS
+        --------------------
+        Song Name: Crystal Clear
+        Artist Name: Johannes Bornlöf
+        Album Name: The Road To Meteora
+        URL: https://p.scdn.co/mp3-preview/a34fddad3b4cfa59a4cbfc2ab809248d1428bf70?cid=b00caac293fd45cbbcacdb62d5bf342b
+        --------------------
+        
+
+        SPOTIFY-THIS
+        --------------------
+        Song Name: Radar (feat. HONNE)
+        Artist Name: Whethan
+        Album Name: Radar (feat. HONNE)
+        URL: https://p.scdn.co/mp3-preview/95a9d4b520152fde054305ac061ab414b3de4020?cid=b00caac293fd45cbbcacdb62d5bf342b
+        --------------------
+        
+
+        MOVIE-THIS
+        --------------------
+        Goodfellas
+        Year: 1990
+        IMDB Rating: 8.7
+        Rotten Tomatoes: 96%
+        Country: USA
+        Language: English, Italian
+        Plot: The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.
+        Actors: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco
+        --------------------
+        
+                
+        CONCERT-THIS
+        -------------------
+        Maroon 5,Julia Michaels
+
+        Venue Location:      XL Center
+                             Hartford, CT, United States
+        Date of Event:       Wed 10/10/2018
+        Ticket Availability: available
+        Buy Ticket URL:
+          https://www.bandsintown.com/t/1001879067?app_id=ba3e912d98b406ee806e6327ffe591bc&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket
+        --------------------
+        
+
+        SPOTIFY-THIS
+        --------------------
+        Song Name: Radar (feat. HONNE)
+        Artist Name: Whethan
+        Album Name: Radar (feat. HONNE)
+        URL: https://p.scdn.co/mp3-preview/95a9d4b520152fde054305ac061ab414b3de4020?cid=b00caac293fd45cbbcacdb62d5bf342b
+        --------------------
+        
+
+        MOVIE-THIS
+        --------------------
+        Goodfellas
+        Year: 1990
+        IMDB Rating: 8.7
+        Rotten Tomatoes: 96%
+        Country: USA
+        Language: English, Italian
+        Plot: The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.
+        Actors: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco
+        --------------------
+        
+
+        MOVIE-THIS
+        --------------------
+        Goodfellas
+        Year: 1990
+        IMDB Rating: 8.7
+        Rotten Tomatoes: 96%
+        Country: USA
+        Language: English, Italian
+        Plot: The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.
+        Actors: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco
+        --------------------
+        
+
+        MOVIE-THIS
+        --------------------
+        Goodfellas
+        Year: 1990
+        IMDB Rating: 8.7
+        Rotten Tomatoes: 96%
+        Country: USA
+        Language: English, Italian
+        Plot: The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.
+        Actors: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco
+        --------------------
+        
